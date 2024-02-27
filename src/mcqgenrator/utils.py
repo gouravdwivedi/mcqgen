@@ -41,7 +41,7 @@ def get_table_data(quiz_str):
             )
 
             correct=value["correct"]
-            quiz_table_data.append({"MCQ" : mcq,"Choices": options, "Correct": correct})
+            quiz_table_data.append({"Question" : mcq,"Choices": options, "Correct Response": correct})
 
         return quiz_table_data
 
@@ -56,3 +56,12 @@ def remove_text_before_first_occurrence(text, delimiter):
         return text[index:]
     else:
         return text
+    
+# Function to insert new line after '|'
+def insert_newline(text):
+    return text.replace('||', '<br>')
+
+
+def convert_df(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv().encode('utf-8')
