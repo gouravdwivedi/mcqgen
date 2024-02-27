@@ -9,8 +9,8 @@ from langchain.callbacks import get_openai_callback
 from src.mcqgenrator.MCQGenrator import generate_evaluate_chain
 from src.mcqgenrator.logger import logging
 
-
-with open('/Users/gouravdwivedi/Projects/GenAiProjects/mcqgen/mcqgen/Response.json','r') as file:
+rfPath = os.getcwd() + "/Response.json"
+with open(rfPath,'r') as file:
     RESPONSE_JSON = json.load(file)
 
 # creating the title for the app
