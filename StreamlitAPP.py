@@ -20,7 +20,7 @@ with open(rfPath,'r') as file:
 
 # create a form using st.form
     with st.form("user_inputs"):
-        st.info('You can upload a pdf file of txt file and we genrate a quiz based on your uploded file. You can specify that how many questions you want in your quiz and what could be defficulty level of your quiz.', icon="ℹ️")
+        st.info('You can upload a .pdf or .txt file and we generate a quiz based on your uploaded file. You can specify that how many questions you want in your quiz and what could be the difficulty level of your quiz. We did not store any information in our system', icon="ℹ️")
 
         #File Upload
         uploaded_file=st.file_uploader("Upload a PDF or txt file to genrate your custom test.", type=['pdf', 'txt'], accept_multiple_files=False)
