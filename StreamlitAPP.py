@@ -10,6 +10,19 @@ from src.mcqgenrator.MCQGenrator import generate_evaluate_chain
 from src.mcqgenrator.logger import logging
 
 
+st.set_page_config(page_title='Agkiya- MC Quiz Genrator', layout = 'wide', page_icon = 'AgkiyaLogo.png', initial_sidebar_state = 'auto')
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+    </style>
+""", unsafe_allow_html=True)
+
 rfPath = os.getcwd() + "/Response.json"
 with open(rfPath,'r') as file:
     RESPONSE_JSON = json.load(file)
