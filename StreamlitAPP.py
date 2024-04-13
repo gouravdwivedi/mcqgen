@@ -33,20 +33,20 @@ with open(rfPath,'r') as file:
 
 # create a form using st.form
     with st.form("user_inputs"):
-        st.info('You can upload a .pdf or .txt file and we generate a quiz based on your uploaded file. You can specify that how many questions you want in your quiz and what could be the difficulty level of your quiz. We did not store any information in our system. All field with * sign are mandatory.', icon="ℹ️")
+        st.info('You can upload a .pdf or .txt file and we generate a quiz based on your uploaded file. You can specify that how many questions you want in your quiz and what could be the difficulty level of your quiz. We did not store any information in our system. All fields are mandatory.', icon="ℹ️")
 
         #File Upload
-        uploaded_file=st.file_uploader("* Upload a PDF or txt file to genrate your custom test.", type=['pdf', 'txt'], accept_multiple_files=False)
+        uploaded_file=st.file_uploader("Upload a PDF or txt file to genrate your custom test.", type=['pdf', 'txt'], accept_multiple_files=False)
         
         
         #Input Fields
-        mcq_count=st.number_input("* No. of Questions in Quiz", min_value=1, max_value=50)
+        mcq_count=st.number_input("No. of Questions in Quiz", min_value=1, max_value=50)
 
         #Subject
-        subject=st.text_input("* Quiz Topic", max_chars=60)
+        subject=st.text_input("Quiz Topic", max_chars=60)
 
          #Quiz Tone
-        tone =  st.selectbox('* Complexity Level of Questions',
+        tone =  st.selectbox('Complexity Level of Questions',
                             ('Easy', 'Medium', 'Hard'))
 
         #Add Button
